@@ -31,60 +31,60 @@ outage may not occur.
 
 # 1. Contents
 
- 1. [Contents](./README.md#1-contents)
-  1.1 [Rationale](./README.md#11-rationale)
-  1.2 [Overview](./README.md#12-overview)
-  1.3 [Project Status](./README.md#13-project-status)
-  1.4 [ESP8266 limitations](./README.md#14-esp8266-limitations)
-  1.5 [ESP32 Issues](./README.md#15-esp32-issues)
-  1.6 [Pyboard D](./README.md#16-pyboard-d)
-  1.7 [Arduino Nano RP2040 Connect](./README.md#17-arduino-nano-rp2040-connect)
-  1.8 [RP2 Pico W](./README.md#18-rp2-pico-w)
-  1.9 [Unix/Linux](./README.md#19-unix-linux)
-  1.10 [Limitations](./README.md#110-limitations) Please read this.
-  1.11 [MQTTv5](./README.md#111-mqttv5) Which version should you use?
- 2. [Getting started](./README.md#2-getting_started)
-  2.1 [Program files](./README.md#21-program-files) Quick installation and setup.
-  2.2 [Installation on ESP8266](./README.md#22-installation-on-esp8266)
-  2.3 [Example Usage](./README.md#23-example-usage) Using the event interface.
-  2.4 [Usage with callbacks](./README.md#24-usage-with-callbacks)
- 3. [MQTTClient class](./README.md#3-mqttclient-class)
-  3.1 [Constructor](./README.md#31-constructor) Describes the MQTT configuration dictionary.
-  3.2 [Methods](./README.md#32-methods)
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.2.1 [connect](./README.md#321-connect)
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.2.2 [publish](./README.md#322-publish)
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.2.3 [subscribe](./README.md#323-subscribe)
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.2.4 [unsubscribe](./README.md#324-unsubscribe)
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.2.5 [isconnected](./README.md#325-isconnected)
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.2.6 [disconnect](./README.md#326-disconnect)
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.2.7 [close](./README.md#327-close)
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.2.8 [broker_up](./README.md#328-broker_up)
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.2.9 [wan_ok](./README.md#329-wan_ok)
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.2.10 [dprint](./README.md#3210-dprint)
-  3.3 [Class Variables](./README.md#33-class-variables)
-  3.4 [Module Attribute](./README.md#34-module-attribute)
-  3.5 [Event based interface](./README.md#35-event-based-interface)
-  3.6 [MQTTv5 Support](./README.md#36-mqttv5-support)
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.6.1 [Configuration and Migration from MQTTv3.1.1](./README.md#361-configuration-and-migration-from-mqttv311)
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.6.2 [MQTTv5 Properties](./README.md#362-mqttv5-properties)
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.6.3 [Unsupported Features](./README.md#363-unsupported-features)
- 4. [Notes](./README.md#4-notes)
-  4.1 [Connectivity](./README.md#41-connectivity)
-  4.2 [Client publications with qos == 1](./README.md#42-client-publications-with-qos-1)
-  4.3 [Client subscriptions with qos == 1](./README.md#43-client-subscriptions-with-qos-1)
-  4.4 [Application Design](./README.md#44-application-design)
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.4.1 [Publication Timeouts](./README.md#441-publication-timeouts)
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.4.2 [Behaviour on power up](./README.md#442-behaviour-on-power-up)
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.4.3 [Optimisations](./README.md#443-optimisations) RAM use, large incoming messages.
-  4.5 [Alternative design approach](./README.md#45-alternative-design-approach) Continue the MQTT paradigm into the application.
- 5. [Non standard applications](./README.md#5-non-standard-applications) Usage in specialist and micropower applications.
-  5.1 [deepsleep](./README.md#51-deepsleep)
-  5.2 [lightsleep and disconnect](./README.md#52-lightsleep-and-disconnect)
-  5.3 [Ultra low power consumption](./README.md#53-ultra-low-power-consumption) For ESP8266 and ESP32.
- 6. [References](./README.md#6-references)
- 7. [Connect Error Codes](./README.md#7-connect-error-codes)
- 8. [Hive MQ](./README.md#8-hive-mq) A secure, free, broker.
- 9. [The ssl_params dictionary](./README.md#9-the-ssl_params-dictionary) Plus user notes on SSL/TLS.
+1. [Contents](./README.md#1-contents)
+    1. [Rationale](./README.md#11-rationale)
+    1. [Overview](./README.md#12-overview)
+    1. [Project Status](./README.md#13-project-status)
+    1. [ESP8266 limitations](./README.md#14-esp8266-limitations)
+    1. [ESP32 Issues](./README.md#15-esp32-issues)
+    1. [Pyboard D](./README.md#16-pyboard-d)
+    1. [Arduino Nano RP2040 Connect](./README.md#17-arduino-nano-rp2040-connect)
+    1. [RP2 Pico W](./README.md#18-rp2-pico-w)
+    1. [Unix/Linux](./README.md#19-unix-linux)
+    1. [Limitations](./README.md#110-limitations) Please read this.
+    1. [MQTTv5](./README.md#111-mqttv5) Which version should you use?
+ 1. [Getting started](./README.md#2-getting_started)
+    1. [Program files](./README.md#21-program-files) Quick installation and setup.
+    1. [Installation on ESP8266](./README.md#22-installation-on-esp8266)
+    1. [Example Usage](./README.md#23-example-usage) Using the event interface.
+    1. [Usage with callbacks](./README.md#24-usage-with-callbacks)
+ 1. [MQTTClient class](./README.md#3-mqttclient-class)
+    1. [Constructor](./README.md#31-constructor) Describes the MQTT configuration dictionary.
+    1. [Methods](./README.md#32-methods)
+        1. [connect](./README.md#321-connect)
+        1. [publish](./README.md#322-publish)
+        1. [subscribe](./README.md#323-subscribe)
+        1. [unsubscribe](./README.md#324-unsubscribe)
+        1. [isconnected](./README.md#325-isconnected)
+        1. [disconnect](./README.md#326-disconnect)
+        1. [close](./README.md#327-close)
+        1. [broker_up](./README.md#328-broker_up)
+        1. [wan_ok](./README.md#329-wan_ok)
+        1. [dprint](./README.md#3210-dprint)
+    1. [Class Variables](./README.md#33-class-variables)
+    1. [Module Attribute](./README.md#34-module-attribute)
+    1. [Event based interface](./README.md#35-event-based-interface)
+    1. [MQTTv5 Support](./README.md#36-mqttv5-support)
+        1. [Configuration and Migration from MQTTv3.1.1](./README.md#361-configuration-and-migration-from-mqttv311)
+        1. [MQTTv5 Properties](./README.md#362-mqttv5-properties)
+        1. [Unsupported Features](./README.md#363-unsupported-features)
+ 1. [Notes](./README.md#4-notes)
+    1. [Connectivity](./README.md#41-connectivity)
+    1. [Client publications with qos == 1](./README.md#42-client-publications-with-qos-1)
+    1. [Client subscriptions with qos == 1](./README.md#43-client-subscriptions-with-qos-1)
+    1. [Application Design](./README.md#44-application-design)
+        1. [Publication Timeouts](./README.md#441-publication-timeouts)
+        1. [Behaviour on power up](./README.md#442-behaviour-on-power-up)
+        1. [Optimisations](./README.md#443-optimisations) RAM use, large incoming messages.
+    1. [Alternative design approach](./README.md#45-alternative-design-approach) Continue the MQTT paradigm into the application.
+1. [Non standard applications](./README.md#5-non-standard-applications) Usage in specialist and micropower applications.
+    1. [deepsleep](./README.md#51-deepsleep)
+    1. [lightsleep and disconnect](./README.md#52-lightsleep-and-disconnect)
+    1. [Ultra low power consumption](./README.md#53-ultra-low-power-consumption) For ESP8266 and ESP32.
+ 1. [References](./README.md#6-references)
+ 1. [Connect Error Codes](./README.md#7-connect-error-codes)
+ 1. [Hive MQ](./README.md#8-hive-mq) A secure, free, broker.
+ 1. [The ssl_params dictionary](./README.md#9-the-ssl_params-dictionary) Plus user notes on SSL/TLS.
 
 ## 1.1 Rationale
 
